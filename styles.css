@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a, #7f1d1d);
+    font-family: 'Poppins', sans-serif;
+    color: #f1faee;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 500px;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #f8f9fa;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content .intro {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffddc1;
+    font-weight: 400;
+}
+
+.content .message, .stay-tuned {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #f4f4f9;
+    font-weight: 300;
+}
+
+button {
+    background-color: #e63946;
+    color: #f1faee;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.4s ease;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #f77f83;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .content h1 {
+        font-size: 1.8em;
+    }
+    
+    .content .intro {
+        font-size: 1.1em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.6em;
+    }
+
+    .content .intro, .content .message, .stay-tuned {
+        font-size: 0.9em;
+    }
+}
